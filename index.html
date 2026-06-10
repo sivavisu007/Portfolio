@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; img-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://api.emailjs.com;">
     <title>SIVAHARI V — AI Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="ambient ambient-1"></div>
-    <div class="ambient ambient-2"></div>
-
-    <!-- NAV -->
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
     <nav>
         <a href="#" class="nav-logo">SIVAHARI<span>.</span>V</a>
         <ul class="nav-links">
@@ -47,8 +48,9 @@
                         </a>
                     </div>
                     <div class="hero-avatar-wrap">
+                        <div id="hero-3d-canvas" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 250%; height: 250%; z-index: -2; pointer-events: none;"></div>
                         <div class="hero-avatar">
-                            <img src="IMG_1321.JPEG" alt="Sivahari V">
+                            <img src="images\IMG_1321.JPEG" alt="Sivahari V">
                         </div>
                         <div class="hero-avatar-deco"></div>
                     </div>
@@ -312,38 +314,33 @@
             <div class="container">
                 <p class="section-label">Skills</p>
                 <h2 class="section-title">My technical toolkit</h2>
-                <div class="skills-categories reveal">
-                    <div class="skill-group">
-                        <div class="skill-group-title">AI / ML</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">Machine Learning</div>
-                        <div class="skill-item">Deep Learning</div>
-                        <div class="skill-item">TensorFlow</div>
-                        <div class="skill-item">Keras</div>
-                        <div class="skill-item">OpenCV</div>
-                        <div class="skill-item">NumPy</div>
-                        <div class="skill-item">CNN / MobileNetV2</div>
-                        <div class="skill-item">SVM / Random Forest</div>
-                        <div class="skill-item">Ensemble Learning</div>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-group-title">Backend / APIs</div>
-                        <div class="skill-item">FastAPI</div>
-                        <div class="skill-item">SQLAlchemy</div>
-                        <div class="skill-item">JWT Auth</div>
-                        <div class="skill-item">REST APIs</div>
-                        <div class="skill-item">SQL</div>
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">Streamlit</div>
-                        <div class="skill-item">Gemini AI API</div>
-                    </div>
-                    <div class="skill-group">
-                        <div class="skill-group-title">Embedded / Other</div>
-                        <div class="skill-item">ESP8266</div>
-                        <div class="skill-item">Arduino UNO</div>
-                        <div class="skill-item">IoT Systems</div>
-                        <div class="skill-item">HTML (Basics)</div>
-                        <div class="skill-item">Git & GitHub</div>
+                <div class="skills-marquee-wrap reveal">
+                    <div class="skills-marquee">
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Machine Learning</div>
+                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">TensorFlow</div>
+                        <div class="skill-tag">Keras</div>
+                        <div class="skill-tag">OpenCV</div>
+                        <div class="skill-tag">NumPy</div>
+                        <div class="skill-tag">MobileNetV2</div>
+                        <div class="skill-tag">FastAPI</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">Streamlit</div>
+                        <div class="skill-tag">IoT Systems</div>
+                        <!-- Duplicate for infinite scroll -->
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Machine Learning</div>
+                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">TensorFlow</div>
+                        <div class="skill-tag">Keras</div>
+                        <div class="skill-tag">OpenCV</div>
+                        <div class="skill-tag">NumPy</div>
+                        <div class="skill-tag">MobileNetV2</div>
+                        <div class="skill-tag">FastAPI</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">Streamlit</div>
+                        <div class="skill-tag">IoT Systems</div>
                     </div>
                 </div>
             </div>
@@ -390,8 +387,8 @@
                 <p class="footer-copy">© 2025 Sivahari V — All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#">LinkedIn</a>
-                    <a href="https://github.com/sivavisu007" target="_blank">GitHub</a>
-                    <a href="https://medium.com/@siva_007" target="_blank">Medium</a>
+                    <a href="https://github.com/sivavisu007" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://medium.com/@siva_007" target="_blank" rel="noopener noreferrer">Medium</a>
                 </div>
             </div>
         </div>
@@ -485,8 +482,8 @@
             </div>
 
             <div class="modal-actions">
-                <a href="https://github.com/sivavisu007/Attendance_system_using_keras_model" target="_blank" class="modal-btn modal-btn-primary" style="background:var(--accent2);">View on GitHub</a>
-                <a href="https://medium.com/@siva_007/facial-and-id-card-recognition-based-attendance-system-0e045601fd80" target="_blank" class="modal-btn modal-btn-secondary">Read on Medium</a>
+                <a href="https://github.com/sivavisu007/Attendance_system_using_keras_model" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary" style="background:var(--accent2);">View on GitHub</a>
+                <a href="https://medium.com/@siva_007/facial-and-id-card-recognition-based-attendance-system-0e045601fd80" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-secondary">Read on Medium</a>
             </div>
         </div>
     </div>
@@ -559,7 +556,7 @@
             </div>
 
             <div class="modal-actions">
-                <a href="https://medium.com/@siva_007/from-intern-to-api-builder-how-i-built-an-e-commerce-app-with-fastapi-d21214a1a22a" target="_blank" class="modal-btn modal-btn-secondary">Read on Medium</a>
+                <a href="https://medium.com/@siva_007/from-intern-to-api-builder-how-i-built-an-e-commerce-app-with-fastapi-d21214a1a22a" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-secondary">Read on Medium</a>
             </div>
         </div>
     </div>
@@ -632,14 +629,24 @@
             </div>
 
             <div class="modal-actions">
-                <a href="https://github.com/sivavisu007/CropGraud-AI" target="_blank" class="modal-btn modal-btn-primary">View on GitHub</a>
-                <a href="https://medium.com/@siva_007/cropguard-ai-teaching-machines-to-diagnose-plant-disease-47dd313e96ca" target="_blank" class="modal-btn modal-btn-secondary">Read on Medium</a>
+                <a href="https://github.com/sivavisu007/CropGraud-AI" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-primary">View on GitHub</a>
+                <a href="https://medium.com/@siva_007/cropguard-ai-teaching-machines-to-diagnose-plant-disease-47dd313e96ca" target="_blank" rel="noopener noreferrer" class="modal-btn modal-btn-secondary">Read on Medium</a>
             </div>
         </div>
     </div>
 
     <!-- EmailJS SDK -->
-         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- VanillaTilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
